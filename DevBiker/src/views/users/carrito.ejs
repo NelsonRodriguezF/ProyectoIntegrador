@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito</title>
+    <link rel="stylesheet" href="/css/styleC1.css" type="text/css">
+    <link rel="stylesheet" href="./styleC11.css" type="text/css">
+</head>
+<body>
+    <%- include("../partials/header.ejs") %>
+
+    <div class="margin-left"></div>
+    <section class="body">
+        <div class="RutaDePosicionamiento" ><label> Ruta de Posicionamiento </label></div>
+        <div class="menuCompras">
+            <section class="seccionDeCompras">
+                <h4 class="textoSeccionDeCompras">Sección de Compras</h4>
+                <div class="productosAgregados">
+                    <div>
+                        <h5>Wisheles</h5>
+                    </div>
+                    <section class="articulosAgregado">
+                            <ul>
+                               
+                                <% carrito.forEach(product => { 
+        
+                                    %> 
+                                <li>
+                                    <article>
+                                        <div class="description">                                        
+                                            <h5 ><%=product.description %></5>
+                                        </div>
+                                        <div class="imagenes">
+                                            <img src="/img/<%=product.image%>">
+                                            <div class="flex-row">
+                                                <p class="price"><%=product.price %></p>
+                                                <p class="discount"><%=product.discount %>%off</p>
+                                            </div>
+                                            <input  class="caja" type="checkbox" name="intereses" id="producto1" value="producto1">
+                                        </div>
+                                     <div class="cantidad">
+                                         <p>Cantidad</p>
+                                         <div>
+                                            <button>
+                                                <button class="Botonl" type="submit" ><i class="fas fa-arrow-left"></i></button>
+                                                <input type="number" name="cantidad">
+                                                <button class="Boton r" type="submit" ><i class="fas fa-arrow-right"></i></button>
+                                            </button>
+                                         </div>
+
+                                     </div>
+                                    </article>
+                                </li>
+                                <% }); %>
+
+
+                            </ul>
+                    </section>
+                    <form class="pasarProductosACompras" action="/" method="post">
+                        <p>Selecciones los productos que desea compra</p>
+                        <button class="Boton-pasar" type="submit" >Pasar a Compra</button>
+                    </form>
+                </div>
+               
+            </section>
+        </div>
+    </section>
+    <div class="margin-right"></div>
+
+    <%- include("../partials/footer.ejs") %>
+</body>
+</html>
+
+
+
+
+
+
+
+

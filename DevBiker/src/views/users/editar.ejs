@@ -1,0 +1,54 @@
+<%- include("../partials/head.ejs") %>
+    <title>Registro</title>
+    <link rel="stylesheet" href="/css/createProduct.css" type="text/css">
+</head>
+<body>
+    <%- include("../partials/header.ejs") %>
+    <main>
+        <div class="margin-left"></div>
+        <div class="principal">
+            <div class="container-form">
+                <div>
+                    <h2 class="titulo">Editar usuario</h2>
+                </div>
+                <form action="/users/editar/<%= usersToEdit.id%>?_method=PATCH" method="POST">
+                    <div>
+                        <label for="nombre">Nombre del producto:</label>  
+                        <input type="text" name="nombre" value="<%= usersToEdit.nombre %>">
+                    </div>
+                    <div class="div">
+                        <label for="apellidos" class="label">Apellidos:</label><br>
+                        <input type="text" name="apellidos" value="<%= usersToEdit.apellidos %>">
+                    </div>
+                    <div class="div">
+                        <label for="email" class="label">Email:</label><br>
+                        <input type="email" name="email" value="<%= usersToEdit.email %>">
+                    </div>
+                    <div class="div">
+                        <label for="fechas" class="label">Fecha nacimiento:</label><br>
+                        <input type="date" id="date" name="fecha" value="<%= usersToEdit.fecha %>">
+                    </div>
+                    <div class="div">
+                        <label for="adress" class="label">Domicilio:</label><br>
+                        <input type="text" id="adress" name="adress" value="<%= usersToEdit.adress %>">
+                    </div>
+                    <div class="div">
+                        <label for="password" class="label">Contraseña:</label><br>
+                        <input type="password" id="password" name="password" value="<%= usersToEdit.password %>">
+                    </div>
+                    <div class="div">
+                        <label for="image" class="label">Foto de perfil:</label><br>
+                        <img src="/img/usersImagen/<%=usersToEdit.image%>" alt="Prototipo <%=usersToEdit.name%> ">
+                        <input type="file" name="image" class="input" value="">
+                    </div>
+                    <div>
+                        <button class="submit" type="submit">Guardar cambios</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="margin-right"></div>
+    </main>
+    <%- include("../partials/footer.ejs") %>
+</body>
+</html>

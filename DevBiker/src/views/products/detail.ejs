@@ -1,0 +1,72 @@
+<!--head-->
+<%- include("../partials/head.ejs") %>
+
+<title>DevBiker</title>
+<link rel="stylesheet" href="/css/detail.css">
+</head>
+
+<body>
+    <!--header-->
+    <%- include("../partials/header.ejs") %>
+
+    <main>
+        <div class="margin-left"></div>
+
+        <div class="principal">
+            <div class="categorias">
+                <%- include("../partials/nav-categorias.ejs") %>
+                <h3 class="titulo"><%=product.description%></h3>
+                <div class="card">
+
+                    <article class="bikes">
+                        <div class="one">
+                            <div class="divOne">
+                                <section>
+                                    <p class="nombre"><%=product.name%></p>
+                                </section>
+                                <section>
+                                    <img src="/img/<%=product.image%>" alt="Prototipo <%=product.name%> ">
+                                </section>
+                            </div>
+                        </div>
+                        <div class="two">
+                            <div class="divTwo"> 
+                                <section class="datos">
+                                    <p class="descuento">%<%=product.discount%> OFF</p>
+                                    <p class="precio">$<%=product.price%></p>
+                                    <i class="far fa-heart"></i>
+                                </section>
+                            </div>
+                            <div class="divThree">
+                                <section class="caracteristicas">
+                                    <p class="caracteristicas-titulo">Caracteristicas</p>
+                                    <p class="caracteristica">Color: <%=product.color%></p>
+                                    <p class="caracteristica">Categoría: <%=product.category%></p>
+                                    <p class="caracteristica">Género: <%=product.genero%></p>
+                                    <p class="caracteristica">Material del marco: <%=product.material%></p>
+                                    <p class="caracteristica">Número de cambios: <%=product.numeroCambios%></p>
+                                    <p class="caracteristica">Suspensión: <%=product.suspension%></p>
+                                    <p class="caracteristica">Tipo de freno: <%=product.tipoFreno%></p>
+                                </section>
+                            </div>
+                            <div class="divFour">
+                                <a href="/carrito">
+                                    <p class="comprar">Comprar</p>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="margin-right"></div>
+    </main>
+
+    <!--footer-->
+    <%- include("../partials/footer.ejs") %>
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<%- include("../partials/head.ejs") %>
+    <title>users-index</title>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+    <%- include("../partials/header.ejs") %>
+    <main>
+        <div class="principal">
+            <h1>Index de los productos</h1>
+            <label for="">
+                <div class="row">
+                    <div class="titulo">
+                        <p>ID</p>
+                        <p>Usuario</p>
+                        <p>Editar</p>
+                        <p>Eliminar</p>
+                    </div>
+                    <div class="items">
+                        <% users.forEach(product => {  %>
+                        <table class="table">
+                        <tr class="products">
+                            <td><%=product.id %></td>
+                            <td><%=product.nombre %></td>
+                            <td>
+                                <form action="/users/editar/<%= product.id %>" method="get" >
+                                    <input type="submit" value="Editar" >
+                                </form>
+                            </td>
+                            <td>
+                                <form action="/users/delete/<%= product.id %>?_method=delete" method="POST">
+                                    <button type="submit">Eliminar</button>
+                                </form>  
+                            </td>  
+                        </tr>
+                        </table>
+                        <% }); %>
+                    </div>
+                </div>
+        </div>
+    </main>
+    <!--footer-->
+    <%- include("../partials/footer.ejs") %>
+</body>
+</html>s

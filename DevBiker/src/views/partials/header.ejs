@@ -1,0 +1,43 @@
+<%- include("../partials/head.ejs") %>
+
+<header>
+    <div class="top-header">
+        <div class="barra"><p class="barra-text">"Lo que gastas en tu bicicleta, lo ahorras en salud"</p></div>
+            <% if(!locals.isLogged){ %>
+                <div class="login">
+                    <a href="/users/login">INICIAR SESIÓN</p></a>
+                </div>
+                <% } else { %>
+                <div class="login2">
+                    <div class="perfilNav">
+                        <a href="/users/perfil"><p>
+                            <i class="fas fa-user"></i> 
+                            <%= locals.userLogged.nombre %></p></a>
+                    </div>
+                    <div class="logout">
+                        <a href="/users/logout"><p>CERRAR SESIÓN</p></a>
+                    </div>
+                </div>
+            <% } %>
+        </div>
+    <div class="nav">
+        <div class="logo">
+            <a href="/"><img src="/img/DevBiker1.png" alt="Logo-DevBiker"></a>
+        </div>
+        <div class="nav-list">
+            <ul>
+                <a href="/products"><li>BICICLETAS</li></a>
+                <a href="/products/oferta"><li>OFERTAS</li></a>
+                <li>NOSOTROS</li>
+            </ul>
+        </div>
+        <div class="burger-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="icons">
+            <i class="fas fa-search"></i>
+            <i class="far fa-heart"></i>
+            <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+    </div>
+</header>

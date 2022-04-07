@@ -1,0 +1,109 @@
+<!--head-->
+<%- include("../partials/head.ejs") %>
+
+    <title>Registro</title>
+    <link rel="stylesheet" href="/css/createProduct.css" type="text/css">
+</head>
+<body>
+    <%- include("../partials/header.ejs") %> 
+    <main>
+
+        <div class="margin-left"></div>
+
+        <div class="principal">
+
+            <div class="container-form">
+                <div>
+                    <h2 class="titulo">Crea tu producto</h2>
+                </div>
+                <form action="/admin" method="POST" enctype="multipart/form-data">
+                   
+                    <div>
+                        <label for="name">Nombre producto:</label>  
+                        <input type="text" name="name" placeholder="Nombre del producto" required>
+                    </div>
+                    <div>
+                        <label for="price">Valor del producto:</label>
+                        <input type="number" name="price" placeholder="Precio" required>
+                    </div>
+                    <div>
+                        <label for="color">Color:</label>
+                        <input type="text" name="color" placeholder="Color" required>
+                    </div>
+                    <div>
+                        <label for="discount">Descuento:</label>
+                        <input type="text" name="discount" placeholder="Descuento" required>
+                    </div>
+                    <div>
+                        <label for="stock">Stock:</label>
+                        <input type="number" name="stock" placeholder="Stock" required>
+                    </div>
+                    <div>
+                        <label for="category">Categoria:</label>
+                        <select name="category" required>
+                            <option>Elige una categoria</option>
+                            <option>Ruta</option>
+                            <option>BMX</option>
+                            <option>Urbano</option>
+                            <option>Montaña</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="tipo">Tipo:</label>
+                        <select name="tipo" required>
+                            <option>Mas Vendido</option>
+                            <option>Promocion</option>
+                            <option selected disabled>Nueva</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="genero">Genero:</label>
+                        <select name="genero" required>
+                            <option value="" selected disabled>Elige un genero</option>
+                            <option>Hombre</option>
+                            <option>Mujer</option>
+                            <option>Unisex</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="image">Cargar imagen</label>
+                        <input type="file" name="image" id="image" required>
+                    </div>
+                    <div>
+                        <label for="description">Descripcion del producto:</label>
+                        <textarea name="description" cols="10" rows="3" placeholder="Añade la descripción:" required></textarea>
+                    </div>
+                    <div>
+                        <label for="file" class="caracteristicas">Caracteristicas</label>
+                        <div>
+                            <label for="material">Material marco:</label>
+                            <input type="text" name="material" required>
+                        </div>
+                        <div>
+                            <label for="numeroCambios">Numero de cambios:</label>
+                            <input type="number" name="numeroCambios" required>
+                        </div>
+                        <div>
+                            <label for="tipoFreno">Tipo de freno:</label>
+                            <input type="text" name="tipoFreno" required>
+                        </div>
+                        <div>
+                            <label for="suspension">Suspención:</label>
+                            <input type="text" name="suspension" required>
+                        </div>
+                    </div>
+
+                    <div>
+                        <input class="button" type="submit" value="Crear Producto">
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+        <div class="margin-right"></div>
+
+    </main>
+    <%- include("../partials/footer.ejs") %>
+</body>
+</html>

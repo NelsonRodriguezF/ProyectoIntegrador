@@ -1,0 +1,48 @@
+<!--head-->
+<%- include("../partials/head.ejs") %>
+
+    <link rel="stylesheet" href="/css/login.css" type="text/css">
+    <title>Login</title>
+</head>
+<body>
+    <%- include("../partials/header.ejs") %>
+    <main>
+        
+        <div class="margin-left"></div>
+
+        <div class="principal">
+            <div class="container_form">
+                <div class="user"><i class="fas fa-user"></i></div>
+                <form action="" method="POST">
+                    <section>
+                        <div>
+                            <label for="email" class="user">Ingrese su correo</label>
+                            <input class="input" type="text" name="email" required>
+                        </div>
+                        
+                        <div>
+                            <label for="password" class="pass">Contraseña</label>
+                            <input class="input" type="password" name="password" required>
+                        </div>
+                        <% if(locals.errors && errors.email){ %>
+                            <p style="color: red;"><%= errors.email.msg %></p>
+                        <% } %>
+                        <input type="checkbox" name="recordarme">
+                        <label for="">Recordarte</label>
+                        <button class="boton" type="submit">Iniciar Sesion</button>
+                    </section>
+                    <div class="link">
+                        <a href="">¿Olvidaste tu contraseña?</a>
+                        <a href="/users/register">Crear cuenta</a> 
+                    </div>
+                </form>
+            </div>  
+        </div>
+
+        <div class="margin-right"></div>
+          
+    </main>
+    
+    <%- include("../partials/footer.ejs") %>
+</body>
+</html>

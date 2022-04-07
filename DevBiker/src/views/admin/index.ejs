@@ -1,0 +1,60 @@
+<%- include("../partials/head.ejs") %> 
+    <title>Admin-index</title>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+
+<body>
+
+    <%- include("../partials/header.ejs") %> 
+    
+    <main>
+        <div class="principal">
+
+            <h1>Index de los productos</h1>
+
+            <label for="">
+                <div class="row">
+                    <div class="titulo">
+                        <p>ID</p>
+                        <p>Producto</p> 
+                        <p>Editar</p>
+                        <p>Eliminar</p>
+                    </div>
+
+                    <div class="items">
+                        <% products.forEach(product => {  %> 
+                        <table class="table">
+                        <tr class="products">
+                            <td><%=product.id %></td>
+                            <td><%=product.name %></td>
+                            <td>
+                                <form action="/admin/editar/<%= product.id %>" method="get" >
+                                    <input class="submit" type="submit" value="Editar" >
+                                </form>
+                            </td>
+                            <td>
+                                <form action="/admin/delete/<%= product.id %>?_method=delete" method="POST">
+                                    <button class="submit" type="submit">Eliminar</button>
+                                </form>  
+                            </td>  
+                        </tr>
+                        </table>
+                        <% }); %>
+                    </div>
+                </div>
+
+            <div class="create">
+                <h4>¿Quieres Crear Un Producto?</h3>
+                <form action="">
+                    <a href="/admin/create">
+                        <input class="button" type="button" value="Crear">
+                    </a>
+                </form> 
+            </div>
+        </div>
+    </main>
+    <!--footer-->
+    <%- include("../partials/footer.ejs") %>
+</body>
+
+</html>

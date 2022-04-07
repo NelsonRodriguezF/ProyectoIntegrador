@@ -1,0 +1,342 @@
+/*Imports*/
+@import url('https://fonts.googleapis.com/css2?family=Oooh+Baby&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luxurious+Roman&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/*Normalización*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*Estilos Comunes*/
+html{                        /*El tamaño de los navegadores por defecto son 16px*/
+    font-size: 65%;          /*De esta manera el valor del navegador es de 10px*/
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+/*Variables*/
+:root{
+    /*Fuentes (min 426px)*/
+    --text1: 9px;
+    --text1-1: 8px;
+    --text2: 10px;
+    --text2-1: 9px;
+    --text3: 15px;
+    --text3-1: 14px;
+}
+
+
+/*Main---------------------------------------------*/
+main{
+    width: 100%;
+    display: flex;
+}
+.margin-left{
+    width: 4%;
+    background-color: #b3b3ff;
+}
+.margin-right{
+    background-color: #b3b3ff;
+    width: 4%;
+}
+.principal{
+    width: 92%;
+}
+
+
+/*Header------------------------------------*/
+header{
+    background-color: #050A30;
+    color: white;
+}
+.top-header{
+    width: 100%;
+    display: flex;
+}
+.barra{
+    width: 77%;
+    background-color: black;
+    border-right: solid 1px #b3b3ff;
+    padding: 5px 0px;
+}
+.barra .barra-text{
+    font-family: 'Oooh Baby', cursive;
+    text-align: center;
+    padding: 3px;
+    font-size: 8px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+}
+.login{
+    width: 23%;
+    font-family: 'Roboto', sans-serif;
+    background-color: #8080ff;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px 3px;
+    font-size: var(--text1-1);
+    padding: 8px 0px;
+    text-decoration: none;
+}
+.login:hover{
+    box-shadow: 0px 0px 12px white;
+}
+.login a{
+    color: #050A30;
+}
+.login2{
+    width: 23%;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Roboto', sans-serif;
+    background-color: #8080ff;
+    font-weight: bold;
+    font-size: var(--text1-1);
+    padding: 8px 0px;
+    text-decoration: none;
+}
+.login2 a{
+    color: #050A30;
+}
+.perfilNav{
+    width: 50%;
+    text-align: center;
+    border-right: 2px solid #050A30;
+    text-align: center;
+}
+.logout{
+    width: 50%;
+    text-align: center;
+}
+.nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: solid 1px #b3b3ff;
+}
+.logo{
+    width: 30%;
+    text-align: center;
+}
+.logo img{
+    width: 100%;
+    height: 50px;
+}
+.nav-list{
+    width: 50%;
+    display: none;
+}
+.nav-list ul{
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    justify-content: right;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+header .nav ul li{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+header .nav ul li:hover{
+    box-shadow: 2px 2px 2px white;
+    font-size: 20px;
+}
+.icons{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    font-size: 16px;
+}
+.icons i{
+    padding: 0px 1px;
+}
+.icons i:hover{
+    color: #b3b3ff;
+    font-size: 30px;
+}
+.burger-menu{
+    display: flex;
+    padding: 4px;
+    border: solid 2px white;
+    border-radius: 4px;
+    margin: 10px 20px 10px 0px;
+}
+.burger-menu i{
+    font-size: 22px;
+}
+
+
+/*Footer-------------------------------------------*/
+footer{
+    background-color: #050A30;
+    color: white;
+    text-align: center;
+}
+.footer-list{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+footer img{
+    width: 90%;
+}
+.footer-list ul{
+    width: 33.33333%;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    line-height: 20px;
+}
+.social-media{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.social-media i{
+    justify-content: center;
+    color: #ccccff;
+    margin: 3px;
+    margin: 5px;
+}
+.social-media i:hover{
+    color: white;
+}
+.footer-list li{
+    list-style-type: none;
+    line-height: 16px;
+    font-size: var(--text1);
+    color: #ccccff;
+    text-align: center;
+}
+.copyright{
+    background-color: black;
+    font-family: 'Oooh Baby';
+    font-size: var(--text1);
+    text-align: center;
+    border-top: solid 1px white;
+    padding: 5px;
+    letter-spacing: 2px;
+}
+
+
+/*@media------------------------------------------------------------------------*/
+@media (min-width: 376px){
+    /*header-------------------------------------------------------*/
+    .nav-list{
+        display: flex;
+        justify-content: right;
+        font-size: var(--text1);
+    }
+    .burger-menu{
+        display: none;
+    }
+    .social-media li{
+        display: flex;
+    }
+    .logo img{
+        margin: 0px 0px 5px 20px;
+    }
+    .icons{
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 426px){
+    /*header-------------------------------------------------------*/
+    .barra .barra-text{
+        font-size: var(--text2);
+    }
+    .login{
+        font-size: var(--text2)
+    } 
+    .login2{
+        font-size: var(--text2)
+    }
+    .nav-list{
+        font-size: 12px;
+    }
+    .logo img{
+        height: 60px;
+    } 
+    
+    /*footer--------------------------------------------------*/
+    .icons{
+        font-size: var(--text2);
+        gap: 12px;
+    }
+    .price{
+        font-size: 11px;
+    }
+    .description{
+        font-size:9px;
+    }
+    .social-media i{
+        font-size: 20px;
+    }
+    .footer-list li{
+        font-size: var(--text2);
+        line-height: 20px;
+    }
+    h4{
+        font-size: var(--text3-1);
+    }
+}
+
+@media (min-width: 769px){
+    /*header-------------------------------------------------------*/
+    .login{
+        font-size: var(--text3)
+    }
+    .login2{
+        font-size: var(--text3-1)
+    }
+    .barra .barra-text{
+        font-size: 18px;
+    }
+    header .nav ul li{
+        font-size: 15px;
+        padding: 10px;
+    }
+    .logo img{
+        margin: 0px 0px 5px 30px;
+        height: 100px;
+    }
+    .nav-list{
+        font-size: 15px;
+    }
+    .nav-list ul{
+        gap: 30px;
+    }
+    .icons{
+        font-size: 17px;
+        gap: 15px;
+    }
+    /*footer-------------------------------------------------------*/
+    h4{
+        font-size: 20px;
+        margin: 15px
+    }
+    .footer-list li{
+        font-size: var(--text3);
+        line-height: 25px;
+    }
+    .social-media i{
+        font-size: 30px;
+        margin: 8px 12px;
+    }
+    .copyright{
+        font-size: var(--text3-1);
+    }
+}

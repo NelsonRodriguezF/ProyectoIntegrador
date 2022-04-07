@@ -1,0 +1,49 @@
+<!--head-->
+<%- include("../partials/head.ejs") %>
+
+<title>DevBiker</title>
+<link rel="stylesheet" href="/css/products.css">
+</head>
+
+<body>
+    <!--header-->
+    <%- include("../partials/header.ejs") %>
+
+    <main>
+        <div class="margin-left"></div>
+
+        <div class="principal">
+            
+            <div class="categorias">
+                <%- include("../partials/nav-categorias.ejs") %>
+                <h3 class="titulo">Montaña</h3>
+                <div class="card">
+                    <% montana.forEach(montana => { %>
+                    <article class="bikes">
+                        <a href="/products/detail/<%= montana.id %>">
+                        <section class="nombre-img">
+                            <p class="nombre"><%=montana.name%></p>
+                            <img src="/img/<%=montana.image%>" alt="Prototipo <%=montana.name%> ">
+                        </section>
+                        <section class="datos">
+                            <p class="descuento">%<%=montana.discount%> OFF</p>
+                            <p class="precio">$ <%=montana.price%></p>
+                        </section>
+                        <p class="descripcion"><%=montana.description%></p>
+                        </a>
+                    </article>
+                    <% }); %>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="margin-right"></div>
+    </main>
+
+    <!--footer-->
+    <%- include("../partials/footer.ejs") %>
+
+</body>
+
+</html>

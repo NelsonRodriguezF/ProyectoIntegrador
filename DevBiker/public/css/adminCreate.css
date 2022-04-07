@@ -1,0 +1,81 @@
+@import url('stylesMain.css');
+
+/*Normalización*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*Estilos Comunes*/
+html{                        /*El tamaño de los navegadores por defecto son 16px*/
+    font-size: 65%;          /*De esta manera el valor del navegador es de 10px*/
+}
+
+/*Body*/
+.text-alt{
+    width: 90%;
+    margin: auto;
+}
+
+/*main*/
+.principal{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    background-image: url("../img/bicycle-g00fa52754_1280.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.container-form{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    background-color: #b3b3ff;
+    border-radius: 8px;
+    padding: 20px;
+    opacity: 0.9;
+    margin: 40px;
+    font-size: 14px;
+}
+.titulo{
+    text-align: center;
+    margin-bottom: 20px;
+}
+label{
+    line-height: 20px;
+}
+.div input{
+    width: 100%;
+    border-radius: 5px;
+}
+.button{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #050A30;
+    color: white;
+    font-size: 14px;    
+    padding: 5px;
+    margin: 15px 0px;
+}
+
+/*@media------------------------------------------------------------------------*/
+@media (min-width: 769px){
+    .container_form{
+        width: 50%;
+        margin: 60px 0px;
+        font-size: 20px;
+    }
+    .titulo-icon i{
+        font-size: 100px;
+    }
+    .div{
+        line-height: 25px;
+    }
+    .button{
+        font-size: 18px;
+    }
+}

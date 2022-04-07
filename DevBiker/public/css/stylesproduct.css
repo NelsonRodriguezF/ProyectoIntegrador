@@ -1,0 +1,145 @@
+@import url('stylesMain.css');
+
+/*Normalización*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*Estilos Comunes*/
+html{                        /*El tamaño de los navegadores por defecto son 16px*/
+    font-size: 65%;          /*De esta manera el valor del navegador es de 10px*/
+}
+
+
+/*Variables*/
+:root{
+    /*Fuentes (min 426px)*/
+    --text1: 9px;
+    --text1-1: 8px;
+    --text2: 10px;
+    --text2-1: 9px;
+    --text3: 15px;
+    --text3-1: 14px;
+}
+
+/*Body*/
+.text-alt{
+    width: 90%;
+    margin: auto;
+}
+
+
+/*Main*/
+main{
+    width: 100%;
+    display: flex;
+}
+.margenes{
+    width: 5%;
+    background-color: #b3b3ff;
+}
+.descripcion{
+    width: 90%;
+    display:flex;
+    flex-direction: column;
+}
+.principalproducto{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: white;
+
+}
+.imagenesproducto{
+    display: flex;
+    flex-direction: column;
+    padding: auto;
+    width: 70%;
+    justify-content: center;
+    background-color: rgba(180, 179, 187, 0.3)
+}
+.img-principal img{
+    width: 100%;
+    padding: 30px;  
+    margin: auto;
+}
+.otrasfotos{
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    background-color:rgba(180, 179, 187, 0.3);
+}
+.minifoto img{
+    width: 90%;
+    padding: 5px;  
+}
+.productodetalles{
+    justify-content: top;
+    background-color: rgba(180, 179, 187, 0.3);
+    width: 30%;
+    display: flex;
+    flex-direction:column;
+}
+.nombre{
+    font-size: large;
+    text-align: center;
+    padding: 20% ;
+    background-color:rgba(180, 179, 187, 0.3);
+}
+.precio{
+    font-size: large;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(180, 179, 187, 0.3);
+}
+.colores{
+    width: 100%;
+    display: flex;
+    padding: 20%;
+    font-size: large;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(180, 179, 187, 0.3);
+}
+.color img{
+    width: 70%;
+    padding: 2px;
+    border-radius: 50%;
+}
+.pago{
+    font-size: large;
+    text-align: center;
+    padding: 20%;
+    background-color: rgba(180, 179, 187, 0.3);
+}
+.especificaciones{
+    padding: 20px;
+}
+.subespecificaciones{
+    background-color: rgba(180, 179, 187, 0.3);
+    padding: 20px;}
+.titulitos{
+    font-size: Large;
+}
+.text-alt{
+    padding: 5px 20px;
+    display: block;
+    text-align: justify;
+}
+
+
+
+/*@media*/
+@media (min-width: 376px){
+
+}
+@media (min-width: 426px){
+
+}
+@media (min-width: 769px){
+
+
+
+}

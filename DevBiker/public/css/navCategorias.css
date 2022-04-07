@@ -1,0 +1,101 @@
+/*Normalización*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*Estilos Comunes*/
+html{                        /*El tamaño de los navegadores por defecto son 16px*/
+    font-size: 65%;          /*De esta manera el valor del navegador es de 10px*/
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+/*Estilos nav*/
+.nav-categorias{
+    width: 100%;
+}
+.titulo-nav{
+    width: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+h2{
+    width: 100%;
+    padding: 6px;
+    text-align: center;
+}
+h2:hover{
+    box-shadow: 0px 0px 8px black;
+}
+h2:target{
+    color: white;
+}
+.lista-categorias{
+    width: 100%;
+    font-size: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #050A30;
+    padding: 8px 0px;
+    border-radius: 6px;
+}
+.lista-categorias li{
+    list-style-type: none;
+    border-radius: 5px;
+    padding: 1px 5px;
+}
+.lista-categorias li:hover{
+    box-shadow: 0px 0px 10px white;
+}
+
+.montana:target{
+    box-shadow: 0px 0px 10px white;
+}
+.montana:target{
+    box-shadow: 0px 0px 10px white;
+}
+.montana:target{
+    box-shadow: 0px 0px 10px white;
+}
+.montana:target{
+    box-shadow: 0px 0px 10px white;
+}
+
+
+@media (min-width: 426px){
+
+    .nav-categorias{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .titulo-nav{
+        width: 35%;
+    }
+    .lista-categorias{
+       width: 65%;
+       justify-content: space-around;
+    }
+}
+
+@media (min-width: 769px){
+    .titulo-nav{
+        width: 35%;
+        font-size: 16px;
+    }
+    .lista-categorias{
+       width: 65%;
+       justify-content: space-around;
+       font-size: 18px;
+    }
+}
+
+

@@ -1,0 +1,288 @@
+@import url('stylesMain.css');
+
+/*Normalización*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*Estilos Comunes*/
+html{                        /*El tamaño de los navegadores por defecto son 16px*/
+    font-size: 65%;          /*De esta manera el valor del navegador es de 10px*/
+}
+
+/*Variables*/
+:root{
+    /*Fuentes (min 426px)*/
+    --text1: 9px;
+    --text1-1: 8px;
+    --text2: 10px;
+    --text2-1: 9px;
+    --text3: 15px;
+    --text3-1: 14px;
+}
+
+/*Body--------------------------------------*/
+.text-alt{
+    width: 90%;
+    margin: auto;
+}
+
+
+/*Main---------------------------------------------*/
+main{
+    width: 100%;
+    display: flex;
+}
+.margin-left{
+    width: 5%;
+    background-color: #b3b3ff;
+}
+.margin-right{
+    background-color: #b3b3ff;
+    width: 5%;
+}
+.principal{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    background-color: white;
+    display: block;
+}
+.principal h3{
+    margin-top: 10px;
+    padding: 10px;
+    font-size: var(--text3-1);
+    text-align: center;
+}
+.principal .img-principal img{
+    width: 50%;
+    display: block;
+    padding: 5px;  
+    margin: auto;
+    border-radius: 15px;
+}
+.img-principal p{
+    margin: auto;
+    width: 90%;
+    text-align: justify;
+    padding: 8px;
+}
+.text-alt{
+    margin: auto;
+    width: 90%;
+    padding: 10px;
+    text-align: justify;
+    margin-bottom: 15px;
+}
+.banner{
+    display: flex;
+    border: 3px solid #b3b3ff;
+}
+.banner img{
+    width: 100%;
+}
+.bestPrice{
+    width: 95%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+.principal-redes{
+    width: 35%;
+    margin: auto;   
+    text-align: center;
+    background-color: #b3b3ff;
+    padding: 1px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+.principal-redes i{
+    margin: 2px;
+}
+.principal-redes i:hover{
+    font-size: 30px;
+}
+.princiapl-redes i{
+    color: #050A30;
+}
+.title-models{
+    width: 100%;
+    text-align: center;
+}
+.models{
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.bikes{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    background-color: #e6e6ff;
+    margin: 8px;
+    padding: 2px;
+    box-shadow: 1px 1px 1px 1px #ccccff;
+}
+.bikes:hover{
+    box-shadow: 0px 0px 8px #050A30;
+}
+.models img{
+    width: 95%;
+    height: 100%;
+    display: flex;
+    margin: auto;
+    border: solid 1px #ffffff;
+    border-radius: 50%;
+}
+.price-descripcion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+.nombre{
+    margin: 8px;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+}
+.precio{
+    font-size: 13px;
+    background-color: #9999ff;
+    padding: 3px;
+    margin: 3px;
+    font-weight: bold;
+    border-radius: 3px;
+}
+.descripcion{
+    font-size: 15px;
+    margin-top: 3px;
+    text-align: center;
+}
+.devbiker{
+    margin: auto;
+    width: 95%;
+    padding: 5px;
+    text-align: justify;
+}
+.devbiker li{
+    margin-left: 16px;
+}
+.findBike{
+    width: 80%;
+    margin: auto;
+    margin-top: 10px;
+    padding: 0px 8px 8px 8px;
+    border: solid 2px #000080;
+    background-color: #b3b3ff;
+    border-radius: 10px;
+    font-size: var(--text1);
+}
+.categories{
+    margin: 50px 0px 30px 0px;
+    padding: 10px 20px;
+    width: 100%;
+    background-color: #e6e6ff;
+}
+.titulo-categories{
+    text-align: center;
+    color: black;
+    margin: 5px;
+}
+.list-catogories{
+    width: 100%;
+    margin: 10px;
+}
+.list-catogories a{
+    color: #050A30;
+}
+
+
+/*@media-----------------*/
+@media (min-width: 426px){
+
+    /*Body----------------------------------------------------*/
+    .img-principal h3{
+        font-size: 18px;
+    }
+    .img-principal p{
+        font-size: var(--text3);
+    }
+    .text-alt{
+        font-size: var(--text3);
+    }
+    .principal-redes{
+        width: 35%;
+        font-size: var(--text3);
+    }
+    .findBike{
+        font-size: var(--text3-1);
+    }
+    .bikes{
+        width: 45%;
+    }
+    .nombre{
+        font-size: 16px;
+    }
+    .descripcion{
+        font-size: 14px;
+    }
+    .categories{
+        font-size: var(--text3);
+    }
+    .bestPrice{
+        font-size: var(--text3);
+    }
+}
+
+@media (min-width: 769px){
+
+    /*Body----------------------------------------------------*/
+    .principal .img-principal h3{
+        font-size: 40px;
+    }
+    .img-principal img{
+        width: 50%;
+    }
+    .img-principal p{
+        font-size: 18px;
+    }
+    .text-alt{
+        font-size: 18px;
+    }
+    .principal h3{
+        font-size: 25px;
+    }
+    .bestPrice{
+        font-size: 20px;
+    }
+    .principal-redes{
+        width: 30%;
+        font-size: 20px;
+    }
+    .bikes{
+        width: 23%;
+    }
+    .precio{
+        margin: 5px 0px;
+        font-size: 17px;
+    }
+    .descripcion{
+        font-size: 16px;
+    }
+    .nombre{
+        font-size: 20px;
+    }
+    .findBike{
+        font-size: 16px;
+        padding: 0px 15px 15px 15px;
+    }
+    .categories{
+        font-size: 20px;
+    }
+}

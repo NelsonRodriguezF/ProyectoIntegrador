@@ -1,0 +1,142 @@
+@import url('stylesMain.css');
+
+/*Normalización*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*Estilos Comunes*/
+html{                        /*El tamaño de los navegadores por defecto son 16px*/
+    font-size: 65%;          /*De esta manera el valor del navegador es de 10px*/
+}
+
+/*Variables*/
+:root{
+    /*Fuentes (min 426px)*/
+    --text1: 9px;
+    --text1-1: 8px;
+    --text2: 10px;
+    --text2-1: 9px;
+    --text3: 15px;
+    --text3-1: 14px;
+}
+
+/*Body*/
+.text-alt{
+    width: 90%;
+    margin: auto;
+}
+
+/*main*/
+.margin-left{
+    width: 5%;
+    background-color: #b3b3ff;
+}
+.margin-right{
+    background-color: #b3b3ff;
+    width: 5%;
+}
+.principal{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+.container-form{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    background-color: #b3b3ff;
+    border-radius: 5px;
+    padding: 20px;
+    opacity: 0.9;
+    margin: 40px;
+    font-size: 14px;
+    line-height: 30px;
+}
+select{
+    display: block;
+}
+input{
+    width: 100%;
+    border-radius: 5px;
+}
+textarea{
+    width: 100%;
+    border-radius: 1px;
+}
+.titulo{
+    text-align: center;
+    margin: 20px;
+}
+.caracteristicas{
+    font-weight: bold;
+    font-size: 15px;
+}
+.button{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #050A30;
+    color: white;
+    font-size: 14px;    
+    padding: 5px;
+    margin: auto;
+    margin-top: 10px;
+}
+.submit{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #050A30;
+    color: white;
+    font-size: 14px;    
+    padding: 5px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+/*Estilo para usuarios*/
+.image{
+    display: flex;
+    justify-content: center;
+}
+img{
+    width: 40%;
+    margin: 20px;
+}
+
+/*@media------------------------------------------------------------------------*/
+@media (min-width: 769px){
+    .container-form{
+        width: 50%;
+        background-color: #b3b3ff;
+        padding: 20px;
+        opacity: 0.9;
+        margin: 60px 0px;
+        font-size: 20px;
+    }
+    .titulo-icon i{
+        font-size: 100px;
+    }
+    .div{
+        line-height: 28px;
+    }
+    .caracteristicas{
+        font-weight: bold;
+        font-size: 21px;
+    }
+    .button{
+        width: 50%;
+        font-size: 18px;
+    }
+    .submit{
+        width: 50%;
+        font-size: 18px;
+    }
+}

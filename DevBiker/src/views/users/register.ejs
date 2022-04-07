@@ -1,0 +1,108 @@
+<!--head-->
+<%- include("../partials/head.ejs") %>
+
+    <title>Registro</title>
+    <link rel="stylesheet" href="/css/register.css" type="text/css">
+</head>
+<body>
+    <!--header-->
+    <%- include("../partials/header.ejs") %>
+
+    <main>
+        <div class="margin-left"></div>
+
+        <div class="principal">
+            <div class="container_form">
+                <div class="titulo-icon">
+                    <h2 class="titulo">Crear Cuenta</h2>
+                    <i class="fas fa-user-plus"></i>
+                </div>                
+
+                <form action="/users" method="POST" enctype="multipart/form-data">
+                    <div class="div">
+                        <label for="nombre" class="label">Nombre:</label><br>
+                        <input type="text" name="nombre" class="input" value="<%= locals.oldData ? oldData.nombre : null %>">
+                    </div>
+                    <% if(locals.errors && errors.nombre){ %>
+                        <p style="color: red;"><%= errors.nombre.msg %></p>
+                    <% } %>
+
+                    <div class="div">
+                        <label for="apellidos" class="label">Apellidos:</label><br>
+                        <input type="text" name="apellidos" class="input" value="<%= locals.oldData ? oldData.apellidos : null %>">
+                    </div>
+                    <% if(locals.errors && errors.apellidos){ %>
+                        <p style="color: red;"><%= errors.apellidos.msg %></p>
+                    <% } %>
+
+                    <div class="div">
+                        <label for="email" class="label">Email:</label><br>
+                        <input type="email" name="email" class="input" value="<%= locals.oldData ? oldData.email : null %>">
+                    </div>
+                    <% if(locals.errors && errors.email){ %>
+                        <p style="color: red;"><%= errors.email.msg %></p>
+                    <% } %>
+                    
+                    <div class="div">
+                        <label for="adress" class="label">Domicilio:</label><br>
+                        <input type="text" name="adress" class="input" value="<%= locals.oldData ? oldData.adress : null %>">
+                    </div>
+                    <% if(locals.errors && errors.adress){ %>
+                        <p style="color: red;"><%= errors.adress.msg %></p>
+                    <% } %>
+
+                    <div class="div">
+                        <label for="fecha" class="label">Fecha nacimiento:</label><br>
+                        <input type="date" name="fecha" class="input" value="<%= locals.oldData ? oldData.fecha : null %>">
+                    </div>
+
+                    <% if(locals.errors && errors.fecha){ %>
+                        <p style="color: red;"><%= errors.fecha.msg %></p>
+                    <% } %>
+
+                    <div class="div">
+                        <label for="password" class="label">Contraseña:</label><br>
+                        <input type="password" name="password" class="input" value="<%= locals.oldData ? oldData.password : null %>">
+                    </div>
+                    <% if(locals.errors && errors.password){ %>
+                        <p style="color: red;"><%= errors.password.msg %></p>
+                    <% } %>
+
+                    <div class="div">
+                        <label for="image" class="label">Agregar imagen:</label><br>
+                        <input type="file" name="image" class="input" value="<%= locals.oldData ? oldData.image : null %>">
+                    </div>
+                    <% if(locals.errors && errors.image){ %>
+                        <p style="color: red;"><%= errors.image.msg %></p>
+                    <% } %>
+
+                    <div class="check">
+                        <div>
+                            <label for="condiciones">Terminos Y Condiciones </label>
+                            <input type="checkbox"  name="condiciones" required>
+                        </div>
+                        <div>
+                            <label for="terminos">Terminos De Uso </label>
+                            <input type="checkbox" name="terminos" required>
+                        </div>
+                    </div>
+                    
+                    <div class="obligatorio">
+                        <p>Campos son obligatorios*</p>
+                    </div>
+                    
+                    <div class="div-button">
+                        <button type="submit" class="button">Crear cuenta</button>
+                        <button type="reset" class="button">Restablecer</button>
+                    </div>  
+                </form>
+            </div>
+        </div>
+
+        <div class="margin-left"></div>
+    </main>
+
+    <!--footer-->
+    <%- include("../partials/footer.ejs") %>
+</body>
+</html>

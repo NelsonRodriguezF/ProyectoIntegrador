@@ -1,0 +1,55 @@
+<!--head-->
+<%- include("../partials/head.ejs") %>
+
+    <link rel="stylesheet" href="/css/perfil.css" type="text/css">
+    <title>Perfil</title>
+</head>
+<body>
+    <%- include("../partials/header.ejs") %>
+    <main>
+        
+        <div class="margin-left"></div>
+
+        <div class="principal">
+            <div class="container">
+
+                <section class="perfil">
+                    <h2>Perfil de usuario</h2>
+                </section>
+                <section class="title-image">
+                    <div class="titleFoto"> 
+                        <h4>Foto de perfil:</h4>
+                    </div>
+                    <div class="img">
+                        <img src="/img/usersImagen/<%=user.image%>" alt="Prototipo <%=user.name%> ">
+                    </div>
+                </section>
+                <section class="informacion">
+                    <h4>Sus datos Son:</h4>
+                    <p class="datos">Nombre: <%= user.nombre %></p>
+                    <p class="datos">Apellidos: <%= user.apellidos %></p>
+                    <p class="datos">Email: <%= user.email %></p>
+                    <p class="datos">Fecha de nacimiento: <%= user.fecha %></p>
+                </section>
+                <section class="botones"> 
+                    <div class="buttonEditar">
+                        <form action="/users/editar/<%= user.id %>" method="get" >
+                            <input type="submit" value="Editar" >
+                        </form>
+                    </div> 
+                </section>
+            </div>
+
+            <div class="picture">
+                <img src="/img/pexels-anna.jpg" alt="">
+            </div> 
+             
+        </div>
+
+        <div class="margin-right"></div>
+          
+    </main>
+    
+    <%- include("../partials/footer.ejs") %>
+</body>
+</html>

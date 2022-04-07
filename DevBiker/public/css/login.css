@@ -1,0 +1,128 @@
+@import url('stylesMain.css');
+
+/*Normalización*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*Estilos Comunes*/
+html{                        /*El tamaño de los navegadores por defecto son 16px*/
+    font-size: 65%;          /*De esta manera el valor del navegador es de 10px*/
+}
+
+/*Variables*/
+:root{
+    /*Fuentes (min 426px)*/
+    --text1: 9px;
+    --text1-1: 8px;
+    --text2: 10px;
+    --text2-1: 9px;
+    --text3: 15px;
+    --text3-1: 14px;
+}
+
+/*Body*/
+.text-alt{
+    width: 90%;
+    margin: auto;
+}
+
+
+/*main*/
+.margin-left{
+    width: 5%;
+    background-color: #b3b3ff;
+}
+.margin-right{
+    background-color: #b3b3ff;
+    width: 5%;
+}
+.principal{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    background-image: url("../img/bicycle.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.container_form{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    background-color: #ccccff;
+    border-radius: 8px;
+    padding: 20px;
+    opacity: 0.9;
+    margin: 40px;
+}
+.user i{
+    display: flex;
+    justify-content: center;
+    color: #050A30;
+    margin-bottom: 10px;
+    font-size: 60px;
+}
+section{
+    line-height: 30px;
+}
+.user{
+    text-align: left;
+    font-size: 15px;
+}
+.pass{
+    text-align: left;
+    font-size: 15px;
+}
+.input{
+    width: 100%;
+    display: flex;
+    border-radius: 5px;
+}
+.boton{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #050A30;
+    color: white;
+    font-size: 14px;    
+    padding: 5px;
+    margin: 15px 0px;
+}
+.link{
+    display: flex;
+    flex-direction: column;
+    line-height: 25px;
+}
+.link a{
+    color: #050A30;
+}
+
+/*@media------------------------------------------------------------------------*/
+@media (min-width: 769px){
+    .container_form{
+        width: 40%;
+        border-radius: 8px;
+        padding: 20px;
+        opacity: 0.9;
+        margin: 60px 0px;
+    }
+    .user i{
+        font-size: 100px;
+    }
+    .user{
+        font-size: 20px;
+    }
+    .pass{
+        font-size: 20px;
+    }
+    .boton{
+        font-size: 25px;
+    }
+    a{
+        font-size: 16px;
+    }
+}

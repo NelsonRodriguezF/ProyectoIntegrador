@@ -1,0 +1,105 @@
+<!--head-->
+<%- include("../partials/head.ejs") %>
+
+    <title>DevBiker</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.css">
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+
+<body>
+    <!--header-->
+    <%- include("../partials/header.ejs") %>
+
+    <main>
+        <div class="margin-left"></div>
+
+        <div class="principal">
+            <section class="img-principal">
+                <h3>Conoce la nueva Orbea Occam TR de 2021</h3>
+                <p> Orbea fabrica bicicletas de muy alta calidad, donde muchas de ellas las vemos en 
+                    competiciones de alto nivel siendo montadas por los deportistas más exigentes llevándolas 
+                    en muchas de las ocasiones al límite.</p>
+                <img src="/img/Orbea-Occam-AM-H10-2018.jpg" alt="img-principal">   
+            </section>
+            <section class="text-alt">
+                <p> Tras renovar en profundidad la gama Occam con el lanzamiento de la tercera generación 
+                    durante la temporada 2019, la firma de Mallabia vuelve a la carga refinando un poco más 
+                    el modelo, ahora más ligero, más agresivo y con más capacidad de absorción. La Orbea 
+                    Occam de 2021 recibe 10 milímetros más de recorrido para la versión TR (130 milímetros) 
+                    y AM (150 milímetros), así como numerosas actualizaciones en cuadro y geometría con el 
+                    objetivo de convertirse en una máquina más Trail que nunca.
+                </p>
+            </section>
+            <div class="banner">
+                <img src="/img/banner2.png" alt="banner">
+            </div>
+            <div class="bestPrice">
+                <h3>Los mejores precios</h3>
+                <p>Si buscas estrenar bici pero ahorrar en costos, te tenemos buenas noticias, contamos con 
+                    los mejores precios en nuestra sección de promociones y además, te damos un tip: durante 
+                    fin de año los vendedores liquidan su inventario para darle espacio al año nuevo, lo que 
+                    da pie a que encuentres precios bajos con excelente calidad.</p>
+            </div>
+            <section class="principal-redes">
+                <p>Encuentranos aqui:</p>
+                <i class="fab fa-facebook-square"></i>
+                <i class="fab fa-instagram-square"></i>
+                <i class="fas fa-envelope-square"></i>
+                <i class="fab fa-whatsapp-square"></i>
+            </section>
+            <section>
+                <h3 class="title-models">Conoce nuestra linea de bicicletas mas vendidas</h3>
+            </section>
+            
+            <section class="models" >
+                <% masVendidos.forEach(product => { %>
+                <article class="bikes">
+                    <p class="nombre"><%=product.name%></p>
+                    <a href="/products/detail/<%= product.id %>">
+                    <img src="/img/<%=product.image%>" alt="Prototipo <%=product.name%> ">
+                </a>
+                    <div class="price-descripcion">
+                        <p class="precio">$ <%=product.price%></p>
+                        <p class="descripcion"><%=product.description%></p>
+                    </div>
+                </article>
+                <% }); %>
+            </section >
+            
+            <section class="devbiker">
+                <div class="findBike">
+                    <h3>¡Encuentra la bicicleta que necesitas!</h3>
+                    <p>La búsqueda de tu bici perfecta es una labor que requiere, entre muchas otras cosas, 
+                        de contar con la información correcta a la mano y por eso en DevBike Colombia 
+                        contamos con un amplio catálogo para que elijas, incluyendo promociones que no puedes 
+                        perderte, cientos de marcas nacionales e internacionales, accesorios indispensables 
+                        para tus rodadas.</p>
+                </div>
+                <div class="categories">
+                    <h2 class="titulo-categories">Categorias</h2>
+                    <h4 class="h3">Una bicicleta para cada disciplina</h4>
+                    <p>Ya diste el primer paso y tienes una idea general de lo que necesitas, tu disciplina 
+                        favorita y un tipo de marco en mente, pero no aún no has decidido cuál marca prefieres. 
+                        ¡No hay problema! Para eso estamos aquí, así que presta mucha atención a los siguientes 
+                        datos:</p>
+                        <div class="list-catogories">
+                            <ul>
+                                <a href="/products/cMontana"><li>Bicicletas de montaña</li></a>
+                                <a href="/products/cRuta"><li>Bicicletas de ruta</li></a>
+                                <a href="/products/cBmx"><li>Bicicletas BMX</li></a>
+                                <a href="/products/cUrbana"><li>Bicicletas urbanas</li></a>
+                            </ul>
+                        </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="margin-right"></div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.js"></script>
+    <!--footer-->
+    <%- include("../partials/footer.ejs") %>
+
+</body>
+
+</html>
