@@ -7,12 +7,12 @@ Esta página estará enfocada a todas aquellas personas apasionadas al mundo de 
 al trabajo sin tener que tomar un transporte público, y lo mejor, de forma saludable. 
 
 
-# Front-end
+## Front-end
 
 Los lenguajes que se implementaron para la parte visual fueron: JavaScript, HTML y CSS. Además se trabajo con el motor de plantillas EJS para mostrar las vistas de forma
 dinámica.
 
-# Back-end
+## Back-end
 
 Para este campo se trabajo con NodeJS y Express como framework. El patron de diseño que usado para comunicar el back y el front es MVC y la base de datos esta 
 construida en formato JSON. 
