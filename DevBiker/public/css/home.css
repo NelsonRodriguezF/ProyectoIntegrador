@@ -56,13 +56,23 @@ main{
     font-size: var(--text3-1);
     text-align: center;
 }
-.principal .img-principal img{
-    width: 50%;
+.img-principal img{
     display: block;
     padding: 5px;  
     margin: auto;
     border-radius: 15px;
 }
+
+#slider{
+    width: 80%;
+    display: block;
+    margin: auto;
+}
+
+.bx-wrapper .bx-viewport{
+    object-fit: contain;
+}
+
 .img-principal p{
     margin: auto;
     width: 90%;
